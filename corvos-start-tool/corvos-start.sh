@@ -62,7 +62,7 @@ echo -e "\033[1mSTEP 5 - SCHOOL LINK\033[0m"
 while true; do
     read -p "Create start menu link for school website? (y/n)" yn
     case $yn in
-        [Yy]* ) echo "Please enter the URL of your school website(EX: www.corvos.edu):"; read link; sudo cp /opt/corvos/student-profile/school-home.desktop /usr/share/applications/; sudo sed -i "s/MYSCHOOL/$link/g" /usr/share/applications/school-home.desktop;; break;;
+        [Yy]* ) echo "Please enter the URL of your school website(EX: www.corvos.edu):"; read link; sudo cp /opt/corvos/student-profile/school-home.desktop /usr/share/applications/; sudo sed -i "s/MYSCHOOL/$link/g" /usr/share/applications/school-home.desktop; break;;
         [Nn]* ) break;;
         * ) echo "Please answer y or n.";;
     esac
@@ -73,4 +73,4 @@ echo "Alright, looks like everything is ready to go!"
 echo -e "We hope you enjoy using \e[1;34mCorvOS\033[0m!"
 echo -e "Check out \e[4mhttps://corvos.io\e[0m"
 echo "==============================================="
-echo "PRESS ANY KEY TO EXIT"
+read -s -n 1 -p "PRESS ANY KEY TO EXIT"
