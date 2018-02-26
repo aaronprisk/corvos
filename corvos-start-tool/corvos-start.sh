@@ -41,7 +41,7 @@ echo -e "\033[1mSTEP 3 - STUDENT PROFILE CLEANER\033[0m"
 while true; do
     read -p "Enable the Student Profile Cleaner? (y/n)" yn
     case $yn in
-        [Yy]* ) sudo cp /opt/corvos/scripts/profileclean.sh /etc/xdg/autostart/; break;;
+        [Yy]* ) sudo cp /opt/corvos/student-profile/Cleaner.desktop /etc/xdg/autostart/; break;;
         [Nn]* ) break;;
         * ) echo "Please answer y or n.";;
     esac
