@@ -20,8 +20,8 @@ while true; do
         [Tt]* ) echo ""; echo "Setting up device as Teacher server"; 
                 echo "PLEASE NOTE: It is highly recommended this device has a static IP address set."
                 read -s -n 1 -p "PRESS ANY KEY TO CONTINUE WITH SETUP"
-                sudo apt-get install epoptes -y > /dev/null/
-                gpasswd -a $SUDO_USER epoptes > /dev/null/
+                sudo apt-get install epoptes -y
+                gpasswd -a $SUDO_USER epoptes
 
                 break;;
         [Ss]* ) echo ""; echo "Setting up device as Student client"; 
