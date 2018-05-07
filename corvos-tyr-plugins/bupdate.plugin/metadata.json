@@ -1,0 +1,18 @@
+{
+	"icon": "",
+	"label": "Browser Updater",
+	"description": "Frequently checks and installs web browser updates",
+	"license": "",
+	"category": "CorvOS",
+	"scripts": {
+		"exec": {
+			"label": "Enable",
+			"command": "run-as-root -s install.sh"
+		},
+		"undo": {
+			"label": "Disable",
+			"command": "run-as-root -s uninstall.sh"
+		},
+		"status": { "command": "test -f /etc/systemd/system/brupdate.service" }
+	}
+}
